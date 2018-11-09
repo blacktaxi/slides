@@ -1,0 +1,15 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "reveal-md -w ./index.md --css custom.css --port 9835",
+    "build": "reveal-md ./index.md --css custom.css --static dist && cp -Rvf img dist && reveal-md ./index.md --css custom.css --print dist/slides.pdf && rm -rf ../dist && mv -v dist/ ../"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "reveal-md": "^2.0.2"
+  }
+}
